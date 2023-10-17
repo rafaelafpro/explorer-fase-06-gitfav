@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+    --ff-primary: 'Poppins', sans-serif;
+    --text-color: #ebebeb;
+
+
+    --hue: 225;
+    --primary-color: hsl(var(--hue), 80%, 60%);
+}
+
+body{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: #010409;
+}
+
+body *{
+    font-family: var(--ff-primary);
+}
+
+button{
+    border: 0;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app{
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 2.5rem 0;
+}
+
+header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search{
+    display: flex;
+    align-items: stretch;
+}
+
+.search input{
+    border: 1px solid #5f5f5f;
+    padding: 0.6rem 1.2rem;
+    border-radius: .6rem 0 0 .6rem;
+    background-color: #0D1117;
+    color: var(--text-color);
+}
+
+.search input:focus{
+    outline: 2px solid var(--primary-color);;
+}
+
+.search button{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid #5f5f5f;
+    border-left: 0;
+    width: 3.2rem;
+    border-radius: 0 .6rem .6rem 0;
+    cursor: pointer;
+    transition: filter 200ms;
+}
+
+.search button:hover{
+    filter: brightness(0.9);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+table *{
+    font-size: 1.4rem;
+    color: var(--text-color);
+
+}
+
+table th{
+    background: var(--primary-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child{
+    border-radius: .4rem 0 0 0;
+}
+
+table th:last-child{
+    border-radius: 0 .4rem 0 0;
+}
+
+table tr{
+    background-color: #10151d;
+}
+
+table tr:nth-child(odd){
+    background-color: #161d27;
+}
+
+table td{
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+
+td.user a{
+    text-decoration: none;
+}
+
+td.user a p{
+    font-weight: bold;
+}
+
+td .remove{
+    background: none;
+    color: red;
+}
